@@ -4,7 +4,7 @@ services:
   zero:
     build: .
     expose:
-      - "9090"
+      - "5000"
     environment:
       - "ENV=PROD"
     links:
