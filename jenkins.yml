@@ -3,8 +3,10 @@ services:
     build: .
     expose:
       - "5000"
+      - "9090"
     ports:
       - "5000:5000"
+      - "9090:9090"
     environment:
       - "ENV=PROD"
     links:
