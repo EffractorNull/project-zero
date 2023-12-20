@@ -1,7 +1,7 @@
 version: '2.11'
 
 services:
-  zero-debug:
+  zero:
     build: .
     expose:
       - "9090"
