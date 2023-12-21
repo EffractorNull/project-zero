@@ -18,3 +18,8 @@ services:
 
   redis:
     image: redis:3.0
+
+networks:
+  bridge:
+    name: bridge
+    external: true
