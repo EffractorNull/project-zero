@@ -7,7 +7,7 @@ class TestCase(unittest.TestCase):
         self.app = zero.app.test_client()
     
     def test_get_mainpage(self):
-        page = self.app.post("/", data=dict(name="Vladimir Putin"))
+        page = self.app.post("/", data=dict(name="Joe Biden"))
         assert page.status_code == 200
         assert 'Hello' in str(page.data)
         assert 'Joe Biden' in str(page.data)
