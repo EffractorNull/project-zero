@@ -27,6 +27,5 @@ services:
 
 networks:
   prod-net:
-    driver: bridge
     name: prod-net
     external: true
