@@ -9,15 +9,21 @@ services:
       - "9090:9090"
     environment:
       - "ENV=PROD"
-    links:
-      - "dnmonster"
-      - "redis"
+    # links:
+    #   - "dnmonster"
+    #   - "redis"
+    networks:
+      - bridge
   
   dnmonster:
     image: amouat/dnmonster:1.0
+    networks:
+      - bridge
 
   redis:
     image: redis:3.0
+    networks:
+      - bridge
 
 networks:
   bridge:
