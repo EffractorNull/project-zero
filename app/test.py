@@ -10,7 +10,7 @@ class TestCase(unittest.TestCase):
         page = self.app.post("/", data=dict(name="Vladimir Putin"))
         assert page.status_code == 200
         assert 'Hello' in str(page.data)
-        assert 'Vladimir Putin' in str(page.data)
+        assert 'Joe Biden' in str(page.data)
 
     def test_html_esacaping(self):
         page = self.app.post("/", data=dict(name='"><b>TEST</b><!--'))
