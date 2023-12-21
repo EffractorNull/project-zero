@@ -13,19 +13,20 @@ services:
     #   - "dnmonster"
     #   - "redis"
     networks:
-      - bridge
+      - prod-net
   
   dnmonster:
     image: amouat/dnmonster:1.0
     networks:
-      - bridge
+      - prod-net
 
   redis:
     image: redis:3.0
     networks:
-      - bridge
+      - prod-net
 
 networks:
-  bridge:
-    name: bridge
+  prod-net:
+    driver: bridge
+    name: prod-net
     external: true
