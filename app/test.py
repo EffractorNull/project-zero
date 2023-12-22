@@ -7,10 +7,10 @@ class TestCase(unittest.TestCase):
         self.app = zero.app.test_client()
     
     def test_get_mainpage(self):
-        page = self.app.post("/", data=dict(name="Алиса Селезнёва"))
+        page = self.app.post("/", data=dict(name="John Smith"))
         assert page.status_code == 200
         assert 'Hello' in str(page.data)
-        assert 'Алиса Селезнёва' in str(page.data)
+        assert 'John Smith' in str(page.data)
 
     def test_html_esacaping(self):
         page = self.app.post("/", data=dict(name='"><b>TEST</b><!--'))
